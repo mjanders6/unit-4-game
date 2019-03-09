@@ -60,8 +60,8 @@ for (hero in picObj) {
     // heroDiv.appendChild(heroImage)
     
     const heroCard = `
-    <div class="col l2 ">
-        <div class="card ${picObj[hero].class}">
+    <div class="col l2 ${picObj[hero].charList}">
+        <div class="card">
             <div id="1" class="card-image">
             <img src="${picObj[hero].pic}" alt="">
             <span class="card-title">${picObj[hero].name}</span>
@@ -70,6 +70,7 @@ for (hero in picObj) {
     </div>
     `
     const heroEl = document.createElement('div')
+    heroEl.className = picObj[hero].charList
     heroEl.innerHTML = heroCard;
     document.querySelector('#test').append(heroEl)
 }
