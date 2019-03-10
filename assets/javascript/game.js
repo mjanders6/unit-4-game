@@ -1,8 +1,8 @@
 let picObj = [
     catwoman = {
         name: 'Cat Woman',
-        class: 'pic',
-        id: 'img',
+        hp: 100,
+        id: '#heros',
         yourCharacter: false,
         defender: false,
         charList: true,
@@ -10,8 +10,8 @@ let picObj = [
     },
     drdoom = {
         name: 'Dr. Doom',
-        class: 'pic',
-        id: 'img',
+        hp: 100,
+        id: '#heros',
         yourCharacter: false,
         defender: false,
         charList: true,
@@ -19,8 +19,8 @@ let picObj = [
     },
     magneto = {
         name: 'Magneto',
-        class: 'pic',
-        id: 'img',
+        hp: 100,
+        id: '#heros',
         yourCharacter: false,
         defender: false,
         charList: true,
@@ -28,8 +28,8 @@ let picObj = [
     },
     joker = {
         name: 'Joker',
-        class: 'pic',
-        id: 'img',
+        hp: 100,
+        id: '#heros',
         yourCharacter: false,
         defender: false,
         charList: true,
@@ -38,24 +38,30 @@ let picObj = [
 ]
 
 for (let i = 0; i < picObj.length; i++) {
-    
+
     const heroCard = `
     <div class="col l2">
         <div class="card">
             <div class="card-image">
-            <img data-value=${picObj[i].charList} src="${picObj[i].pic}" alt="">
-            <span class="card-title">${picObj[i].name}</span>
+                <img data-value="${picObj[i].charList}" src="${picObj[i].pic}">
+            </div>
+            <div class="card-content">
+                <span class="card-title">${picObj[i].name}</span>
+                <p>HP's: ${picObj[i].hp}</p>
             </div>
         </div>
     </div>
     `
+    const heros = `${picObj[i].id}`
     const heroEl = document.createElement('div')
+
     heroEl.innerHTML = heroCard;
-    document.querySelector('#test').append(heroEl)
+    document.querySelector(heros).append(heroEl)
 }
 
 document.addEventListener('click', e => {
     console.log(e.target.dataset.value);
-    
-    
+
+
 })
+

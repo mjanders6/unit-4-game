@@ -18,17 +18,28 @@ body {
   z-index: -99;
 }
 
-.container {
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  flex-direction: row;
+.card {
+  position: relative;
+  margin: .5rem 0 1rem 0;
+  background-color: #fff;
+  height: 100%;
+  border-radius: 2px;
+  width: 130px;
 }
 
-.grid-item {
+.card .card-content {
+  padding: 0px;
+}
+
+.card .card-image img {
   position: relative;
-  margin: 25px;
-  overflow: auto;
-  text-align: center;
+  min-height: 200px;
+  height: auto;
+  width: 130px;
+  margin: 0px 0px 0px 0px;
+}
+
+.row {
+  height: 100%;
+  margin: 0px 0px 0px 0px;
 }
