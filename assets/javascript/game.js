@@ -24,7 +24,7 @@ let picObj = {
         yourCharacter: false,
         defender: false,
         charList: true,
-        pic: './assets/images/thumbnails/Magneto.png'
+        pic: './assets/images/thumbnails/magneto.png'
     },
     joker: {
         name: 'Joker',
