@@ -1,5 +1,5 @@
-let picObj = {
-    catwoman: {
+let picObj = [
+    catwoman = {
         name: 'Cat Woman',
         class: 'pic',
         id: 'img',
@@ -8,7 +8,7 @@ let picObj = {
         charList: true,
         pic: './assets/images/thumbnails/catwoman.png'
     },
-    drdoom: {
+    drdoom = {
         name: 'Dr. Doom',
         class: 'pic',
         id: 'img',
@@ -17,7 +17,7 @@ let picObj = {
         charList: true,
         pic: './assets/images/thumbnails/drDoom.png'
     },
-    magneto: {
+    magneto = {
         name: 'Magneto',
         class: 'pic',
         id: 'img',
@@ -26,7 +26,7 @@ let picObj = {
         charList: true,
         pic: './assets/images/thumbnails/magneto.png'
     },
-    joker: {
+    joker = {
         name: 'Joker',
         class: 'pic',
         id: 'img',
@@ -35,36 +35,16 @@ let picObj = {
         charList: true,
         pic: './assets/images/thumbnails/joker.png'
     }
-}
-// create a class
-// append to that class the image structure with a loop.
-// need to loop through the object and pull out the name, picture, 
-// document.querySelector('#test').innerHTML = `<img src="${picObj.catwoman.pic}" alt="">`
-// document.querySelector('#test').innerHTML = `
-// <div class="col l2">
-//     <div class="card">
-//         <div id="1" class="card-image">
-//         <img src="${picObj.catwoman.pic}" alt="">
-//             <span class="card-title">Cat Woman</span>
-//         </div>
-//     </div>
-// </div>
-// `
+]
 
-for (hero in picObj) {
-    // const heroDiv = document.createElement('span')
-    // const heroImage = document.createElement('img')
-    
-    // heroDiv.className = `card ${picObj[hero].class}`
-    // heroImage.src = picObj[hero].pic
-    // heroDiv.appendChild(heroImage)
+for (let i = 0; i < picObj.length; i++) {
     
     const heroCard = `
-    <div class="col l2 ${picObj[hero].charList}">
+    <div class="col l2">
         <div class="card">
-            <div data-value=${picObj[hero]} class="card-image">
-            <img src="${picObj[hero].pic}" alt="">
-            <span class="card-title">${picObj[hero].name}</span>
+            <div class="card-image">
+            <img data-value=${picObj[i].charList} src="${picObj[i].pic}" alt="">
+            <span class="card-title">${picObj[i].name}</span>
             </div>
         </div>
     </div>
@@ -75,6 +55,7 @@ for (hero in picObj) {
 }
 
 document.addEventListener('click', e => {
-    console.log(e);
+    console.log(e.target.dataset.value);
+    
     
 })
