@@ -34,7 +34,7 @@ let picObj = {
         defender: false,
         charList: true,
         pic: './assets/images/thumbnails/joker.png'
-    },
+    }
 }
 // create a class
 // append to that class the image structure with a loop.
@@ -62,7 +62,7 @@ for (hero in picObj) {
     const heroCard = `
     <div class="col l2 ${picObj[hero].charList}">
         <div class="card">
-            <div id="1" class="card-image">
+            <div data-value=${picObj[hero]} class="card-image">
             <img src="${picObj[hero].pic}" alt="">
             <span class="card-title">${picObj[hero].name}</span>
             </div>
@@ -70,7 +70,6 @@ for (hero in picObj) {
     </div>
     `
     const heroEl = document.createElement('div')
-    heroEl.className = picObj[hero].charList
     heroEl.innerHTML = heroCard;
     document.querySelector('#test').append(heroEl)
 }
