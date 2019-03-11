@@ -47,6 +47,8 @@ document.getElementById('defender').innerHTML = ''
 
 }
 
+
+
 const picElem = (picObj) => {
     for (hero in picObj) {
         const heroEl = document.createElement('div')
@@ -70,6 +72,9 @@ const picElem = (picObj) => {
     }
 }
 
+defenderSelected = false
+heroSelected = false 
+
 document.addEventListener('click', e => {
     console.log(e);
     console.log(e.target);
@@ -78,14 +83,21 @@ document.addEventListener('click', e => {
     let objFind = idChange.dataset.tag
     console.log(picObj[objFind].name);
 
-    if (picObj[objFind].picClicked === false && picObj[objFind].id === 'heros') {
+    if (picObj[objFind].picClicked === false && picObj[objFind].id === 'heros' && defenderSelected === false) {
         picObj[objFind].picClicked = true
         picObj[objFind].id = 'defender'
         picObj[objFind].status = 'fighting'
+        defenderSelected = true
+        init()
+        picElem(picObj)
+    } else if (picObj[objFind].picClicked === false && picObj[objFind].id === 'heros' && heroSelected === false) {
+        picObj[objFind].picClicked = true
+        picObj[objFind].id = 'mySelect'
+        picObj[objFind].status = 'fighting'
+        heroSelected = true
         init()
         picElem(picObj)
     }
-
 
 
 })
