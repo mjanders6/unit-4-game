@@ -9,6 +9,8 @@ let picObj = {
         id: 'heros',
         picClicked: false,
         status: 'waiting',
+        attackPoints: 1,
+        counterAttackPoints: 2,
         pic: './assets/images/thumbnails/catwoman.png'
     },
     drdoom: {
@@ -18,6 +20,8 @@ let picObj = {
         id: 'heros',
         picClicked: false,
         status: 'waiting',
+        attackPoints: 1,
+        counterAttackPoints: 2,
         pic: './assets/images/thumbnails/drDoom.png'
     },
     magneto: {
@@ -27,6 +31,8 @@ let picObj = {
         id: 'heros',
         picClicked: false,
         status: 'waiting',
+        attackPoints: 1,
+        counterAttackPoints: 2,
         pic: './assets/images/thumbnails/magneto.png'
     },
     joker: {
@@ -36,6 +42,8 @@ let picObj = {
         id: 'heros',
         picClicked: false,
         status: 'waiting',
+        attackPoints: 1,
+        counterAttackPoints: 2,
         pic: './assets/images/thumbnails/joker.png'
     }
 }
@@ -46,8 +54,6 @@ document.getElementById('mySelect').innerHTML = ''
 document.getElementById('defender').innerHTML = ''
 
 }
-
-
 
 const picElem = (picObj) => {
     for (hero in picObj) {
