@@ -5,45 +5,45 @@ let picObj = {
     catwoman: {
         tag: 'catwoman',
         name: 'Cat Woman',
-        hp: 100,
+        hp: Math.floor(Math.random()*100),
         id: 'heros',
         picClicked: false,
         status: 'waiting',
-        attackPoints: 1,
-        counterAttackPoints: 2,
+        attackPoints: Math.floor(Math.random()*100),
+        counterAttackPoints: Math.floor(Math.random()*100),
         pic: './assets/images/thumbnails/catwoman.png'
     },
     drdoom: {
         tag: 'drdoom',
         name: 'Dr. Doom',
-        hp: 100,
+        hp: Math.floor(Math.random()*100),
         id: 'heros',
         picClicked: false,
         status: 'waiting',
-        attackPoints: 1,
-        counterAttackPoints: 2,
+        attackPoints: Math.floor(Math.random()*100),
+        counterAttackPoints: Math.floor(Math.random()*100),
         pic: './assets/images/thumbnails/drDoom.png'
     },
     magneto: {
         tag: 'magneto',
         name: 'Magneto',
-        hp: 100,
+        hp: Math.floor(Math.random()*100),
         id: 'heros',
         picClicked: false,
         status: 'waiting',
-        attackPoints: 1,
-        counterAttackPoints: 2,
+        attackPoints: Math.floor(Math.random()*100),
+        counterAttackPoints: Math.floor(Math.random()*100),
         pic: './assets/images/thumbnails/magneto.png'
     },
     joker: {
         tag: 'joker',
         name: 'Joker',
-        hp: 100,
+        hp: Math.floor(Math.random()*100),
         id: 'heros',
         picClicked: false,
         status: 'waiting',
-        attackPoints: 1,
-        counterAttackPoints: 2,
+        attackPoints: Math.floor(Math.random()*100),
+        counterAttackPoints: Math.floor(Math.random()*100),
         pic: './assets/images/thumbnails/joker.png'
     }
 }
@@ -103,9 +103,9 @@ document.addEventListener('click', e => {
         heroSelected = true
         init()
         picElem(picObj)
-    }
-
-
+    } 
+    
 })
+
 
 picElem(picObj)
